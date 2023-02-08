@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../scss/index.scss">
+    <title>Profile</title>
+</head>
+<body>
+    
+    <div class="profile-page centered-page">
+
+        <a href="../chats/chats.hbs" class="back__link">Go back</a>
+        <div class="card">
+            <div class="details">
+                
+
+                <div class="details-avatar">
+                    <div class="avatar-wrapper">
+                        <img class="profile-pic" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" />
+                        <input class="file-upload" hidden="true" type="file" accept="image/*"/>
+                    </div>
+                    
+                    <div class="details-avatar__username">John doe</div>
+                </div>
+
+                <ul class="details-list">
+                    <li class="details-list__item">
+                        <span class="field">Email</span>
+                        <span class="value">test@test.com</span>
+                    </li>
+                    <li class="details-list__item">
+                        <span class="field">Login</span>
+                        <span class="value">John</span>
+                    </li>
+                    <li class="details-list__item">
+                        <span class="field">First name</span>
+                        <span class="value">John</span>
+                    </li>
+                    <li class="details-list__item">
+                        <span class="field">Last name</span>
+                        <span class="value">Doe</span>
+                    </li>
+                    <li class="details-list__item">
+                        <span class="field">Display name</span>
+                        <span class="value">Doe</span>
+                    </li>
+                    <li class="details-list__item">
+                        <span class="field">Phone</span>
+                        <span class="value">123819230</span>
+                    </li>
+                </ul>
+
+                <div class="details-actions">
+                    <a href="../profile-edit/profile-edit.hbs" class="details-actions__item text-primary">Change profile</a>
+                    <a href="../new-password/new-password.hbs" class="details-actions__item text-primary">Change password</a>
+                    <a href="/" class="details-actions__item text-danger">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

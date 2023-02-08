@@ -1,0 +1,50 @@
+.textfield {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+
+    &:not(:last-child) {
+        margin-bottom: 1.6rem;
+    }
+
+    &__label {
+        color: $secondary-text;
+        font-size: 1.5rem;
+    }
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+    }
+
+    &__error {
+        color: $danger-color;
+        font-size: 1.2rem;
+        display: none;
+    }
+
+    &.error {
+        .textfield {
+            &__error {
+                display: block;
+            }
+
+            &__input {
+                border: 1px solid $danger-color;
+            }
+        }
+    }
+
+    &__input {
+        background: #fff;
+        border-radius: $input-border-radius;
+        padding: 1.6rem;
+        border: none;
+        color: $dark-color;
+
+        &::placeholder {
+            color: $secondary-text-light;
+        }
+    }
+}

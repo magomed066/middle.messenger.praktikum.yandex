@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../scss/index.scss">
+    <title>Chats</title>
+</head>
+<body>
+
+    <div class="chats-page">
+        <div class="container">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <a href="/" class="sidebar-header__link danger">
+                        Logout
+                    </a>
+                    <a href="../profile/profile.hbs" class="sidebar-header__link">
+                        Profile 
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L6.35355 5.64645C6.54882 5.84171 6.54882 6.15829 6.35355 6.35355L1.35355 11.3536C1.15829 11.5488 0.841709 11.5488 0.646447 11.3536C0.451184 11.1583 0.451184 10.8417 0.646447 10.6464L5.29289 6L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z" fill="#186DEE"/>
+                        </svg>
+                    </a>
+                </div>
+
+                {{> search type="text"}}
+                {{> chats-list }}
+
+            </div>
+            <div class="chat">
+                <div class="chat-header">
+                    <div class="user">
+                        <div class="user__image"></div>
+                        <span class="user__name">John Doe</span>
+                    </div>
+
+                    <div class="options">
+                        <span class="options-menu">
+                            <svg width="4" height="20" viewBox="0 0 4 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#858585"/>
+                                <path d="M2 12C3.10457 12 4 11.1046 4 10C4 8.89543 3.10457 8 2 8C0.89543 8 0 8.89543 0 10C0 11.1046 0.89543 12 2 12Z" fill="#858585"/>
+                                <path d="M2 20C3.10457 20 4 19.1046 4 18C4 16.8954 3.10457 16 2 16C0.89543 16 0 16.8954 0 18C0 19.1046 0.89543 20 2 20Z" fill="#858585"/>
+                            </svg>
+                        </span>
+
+                        <ul class="options-list">
+                            <li class="options-list__item">Add user</li>
+                            <li class="options-list__item">Delete user</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chat-body">
+                    {{> messages-list}}
+                </div>
+
+                <div class="chat-footer">
+                    <div class="chat-panel">
+                        <span class="chat-panel__icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.44444 15.5556H15.5556C15.7778 15.5556 15.9444 15.4537 16.0556 15.25C16.1667 15.0463 16.1481 14.8519 16 14.6667L12.9444 10.5833C12.8333 10.4352 12.6852 10.3611 12.5 10.3611C12.3148 10.3611 12.1667 10.4352 12.0556 10.5833L9.16667 14.4444L7.11111 11.6944C7 11.5463 6.85185 11.4722 6.66667 11.4722C6.48148 11.4722 6.33333 11.5463 6.22222 11.6944L4 14.6667C3.85185 14.8519 3.83333 15.0463 3.94444 15.25C4.05556 15.4537 4.22222 15.5556 4.44444 15.5556ZM2.22222 20C1.61111 20 1.08778 19.7826 0.652222 19.3478C0.217407 18.9122 0 18.3889 0 17.7778V2.22222C0 1.61111 0.217407 1.08778 0.652222 0.652222C1.08778 0.217407 1.61111 0 2.22222 0H17.7778C18.3889 0 18.9122 0.217407 19.3478 0.652222C19.7826 1.08778 20 1.61111 20 2.22222V17.7778C20 18.3889 19.7826 18.9122 19.3478 19.3478C18.9122 19.7826 18.3889 20 17.7778 20H2.22222ZM2.22222 17.7778H17.7778V2.22222H2.22222V17.7778Z" fill="#186DEE"/>
+                            </svg>
+                        </span>
+
+                        <input type="text" placeholder="Введите сообщение..." class="chat-panel__input">
+                        <button class="chat-panel__submit">
+                            <svg class="chat-panel__icon" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.4 17.4L18.85 9.92003C19.0304 9.84318 19.1842 9.715 19.2923 9.55142C19.4004 9.38785 19.4581 9.1961 19.4581 9.00003C19.4581 8.80395 19.4004 8.6122 19.2923 8.44863C19.1842 8.28505 19.0304 8.15687 18.85 8.08003L1.4 0.600025C1.2489 0.53412 1.08377 0.506868 0.919509 0.520728C0.755246 0.534589 0.597018 0.589125 0.459098 0.679417C0.321179 0.76971 0.207908 0.892917 0.129505 1.03793C0.0511009 1.18293 0.010031 1.34518 0.00999999 1.51003L0 6.12003C0 6.62003 0.37 7.05002 0.87 7.11002L15 9.00003L0.87 10.88C0.37 10.95 0 11.38 0 11.88L0.00999999 16.49C0.00999999 17.2 0.74 17.69 1.4 17.4Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+</body>
+</html>

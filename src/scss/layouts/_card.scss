@@ -1,0 +1,24 @@
+.card {
+    width: 45rem;
+
+    background: $secondary-bg;
+    border-radius: $primary-border-radius;
+    padding: 4rem;
+
+    &__title {
+        font-weight: 400;
+        text-align: center;
+        color: $primary-color;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        color: $primary-color;
+        text-align: end;
+        margin-top: 1.6rem;
+        font-size: 1.6rem;
+    }
+}

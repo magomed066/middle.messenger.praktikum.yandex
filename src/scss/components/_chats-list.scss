@@ -1,0 +1,88 @@
+.chats-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 3rem;
+    height: 100%;
+    overflow: scroll;
+    padding-bottom: 3rem;
+
+    &__item {
+        background: #fff;
+        border-radius: $input-border-radius;
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        align-items: center;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        &:hover {
+            background: rgba(24, 109, 238, 0.11);
+        }
+
+        &.active {
+            background: rgba(24, 109, 238, 0.11);
+        }
+
+        .avatar {
+            width: 4.5rem;
+            height: 4.5rem;
+            background-color: $secondary-text-light;
+            border-radius: 50%;
+        }
+
+        .user {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-left: 1rem;
+
+            &__name {
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 14px;
+            }
+
+            &__message {
+                font-weight: 400;
+                font-size: 1.4rem;
+                color: #696969;
+                width: 13rem;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-bottom: auto;
+            align-items: flex-end;
+            gap: 1rem;
+
+            &__time {
+                font-size: 1.4rem;
+                color: $primary-color;
+            }
+
+            &__counter {
+                width: 2rem;
+                height: 2rem;
+                background: $primary-color;
+                text-align: center;
+                border-radius: 50%;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

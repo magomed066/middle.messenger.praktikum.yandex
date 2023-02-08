@@ -1,0 +1,28 @@
+{
+	"name": "online-chat",
+	"version": "1.0.0",
+	"description": "Web App in Vanilla TS",
+	"source": "./src/index.hbs",
+	"scripts": {
+		"dev": "parcel",
+		"start": "node server.js",
+		"build": "parcel build"
+	},
+	"engines": {
+		"node": ">= 14.0.0"
+	},
+	"keywords": [
+		"TypeScript",
+		"Sass",
+		"Vanilla",
+		"TS"
+	],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@anikin/parcel-transformer-handlebars": "^1.0.9",
+		"@parcel/transformer-sass": "^2.8.3",
+		"express": "^4.18.2",
+		"parcel": "^2.8.3"
+	}
+}
