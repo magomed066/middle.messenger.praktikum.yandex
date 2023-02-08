@@ -1,6 +1,6 @@
-Ссылка на прототип проекта: [https://www.figma.com/file/vL07bbfaYaJt3ET87pm5O7/Untitled?node-id=0%3A1&t=9eNFJjU4CTKWYtm9-0](Перейти)
+Ссылка на прототип проекта: [https://www.figma.com/file/vL07bbfaYaJt3ET87pm5O7/Untitled?node-id=0%3A1&t=9eNFJjU4CTKWYtm9-0](https://www.figma.com/file/vL07bbfaYaJt3ET87pm5O7/Untitled?node-id=0%3A1&t=9eNFJjU4CTKWYtm9-0)
 
-Ссылка на demo проекта: [https://soft-torte-2cc161.netlify.app/](Перейти)
+Ссылка на demo проекта: [https://soft-torte-2cc161.netlify.app/](https://soft-torte-2cc161.netlify.app/)
 
 **Chatify** - веб-приложение для общения онлайн
 
