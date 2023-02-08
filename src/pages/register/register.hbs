@@ -9,22 +9,23 @@
     <title>Register</title>
 </head>
 <body>
-
-    <div class="auth-page centered-page">
+    <main class="auth-page centered-page">
         <form class="card">
             <h1 class="card__title">Sign up</h1>
 
             {{> input for="email" label="Email" id="email" name="email" type="email" placeholder="Type your email..."}}
             {{> input for="login" label="Login" id="login" name="login" type="login" placeholder="Type your login..."}}
             {{> input for="first_name" label="First name" id="first_name" name="first_name" type="text" placeholder="Type your first name..."}}
-            {{> input for="last_name" label="Last name" id="last_name" name="last_name" type="text" placeholder="Type your last name..."}}
+            {{> input for="second_name" label="Second name" id="second_name" name="second_name" type="text" placeholder="Type your second name..."}}
             {{> input for="phone" label="Phone" id="phone" name="phone" type="text" placeholder="Type your last phone..."}}
             {{> input for="password" label="Password" id="password" name="password" type="password" placeholder="Type your password..."}}
 
             {{> button type="submit" text="Sign up" className="btn-primary"}}
 
-            <a href="/" class="card__link">Already have an account?</a>
+            <nav class="card-navigation">
+                <a href="/" class="card__link">Already have an account?</a>
+            </nav>
         </form>
-    </div>     
+    </main>     
 </body>
 </html>

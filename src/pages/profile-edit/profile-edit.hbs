@@ -8,25 +8,23 @@
     <title>Editing profile</title>
 </head>
 <body>
-    
-    <div class="profile-page centered-page">
+    <main class="profile-page centered-page">
         <div class="card">
-           
             <form>
                 {{> input for="email" label="Email" id="email" name="email" type="email" placeholder="Type your email..."}}
                 {{> input for="login" label="Login" id="login" name="login" type="login" placeholder="Type your login..."}}
                 {{> input for="first_name" label="First name" id="first_name" name="first_name" type="text" placeholder="Type your first name..."}}
-                {{> input for="last_name" label="Last name" id="last_name" name="last_name" type="text" placeholder="Type your last name..."}}
+                {{> input for="second_name" label="Second name" id="second_name" name="second_name" type="text" placeholder="Type your second name..."}}
                 {{> input for="display_namee" label="Display name" id="display_name" name="display_name" type="text" placeholder="Type your display name..."}}
                 {{> input for="phone" label="Phone" id="phone" name="phone" type="text" placeholder="Type your last phone..."}}
 
                 {{> button text="Save" type="submit" className="btn-primary"}}
             </form>
 
-            <a href="../profile/profile.hbs" class="card__link text-primary">Cancel</a>
-
+            <nav class="card-navigation">
+                <a href="../profile/profile.hbs" class="card__link text-primary">Cancel</a>
+            </nav>
         </div>
-    </div>
-
+    </main>
 </body>
 </html>

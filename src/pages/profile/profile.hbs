@@ -8,55 +8,53 @@
     <title>Profile</title>
 </head>
 <body>
-    
     <div class="profile-page centered-page">
-
-        <a href="../chats/chats.hbs" class="back__link">Go back</a>
+       <nav>
+            <a href="../chats/chats.hbs" class="back__link">Go back</a>
+       </nav>
         <div class="card">
             <div class="details">
-                
-
                 <div class="details-avatar">
                     <div class="avatar-wrapper">
-                        <img class="profile-pic" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" />
+                        <img class="profile-pic" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" alt="Profile picture" />
                         <input class="file-upload" hidden="true" type="file" accept="image/*"/>
                     </div>
                     
-                    <div class="details-avatar__username">John doe</div>
+                    <p class="details-avatar__username">John doe</p>
                 </div>
 
                 <ul class="details-list">
                     <li class="details-list__item">
-                        <span class="field">Email</span>
-                        <span class="value">test@test.com</span>
+                        <p class="field">Email</p>
+                        <p class="value">test@test.com</p>
                     </li>
                     <li class="details-list__item">
-                        <span class="field">Login</span>
-                        <span class="value">John</span>
+                        <p class="field">Login</p>
+                        <p class="value">John</p>
                     </li>
                     <li class="details-list__item">
-                        <span class="field">First name</span>
-                        <span class="value">John</span>
+                        <p class="field">First name</p>
+                        <p class="value">John</p>
                     </li>
                     <li class="details-list__item">
-                        <span class="field">Last name</span>
-                        <span class="value">Doe</span>
+                        <p class="field">Last name</p>
+                        <p class="value">Doe</p>
                     </li>
                     <li class="details-list__item">
-                        <span class="field">Display name</span>
-                        <span class="value">Doe</span>
+                        <p class="field">Display name</p>
+                        <p class="value">Doe</p>
                     </li>
                     <li class="details-list__item">
-                        <span class="field">Phone</span>
-                        <span class="value">123819230</span>
+                        <p class="field">Phone</p>
+                        <p class="value">123819230</p>
                     </li>
                 </ul>
 
-                <div class="details-actions">
+                <nav class="details-actions">
                     <a href="../profile-edit/profile-edit.hbs" class="details-actions__item text-primary">Change profile</a>
                     <a href="../new-password/new-password.hbs" class="details-actions__item text-primary">Change password</a>
                     <a href="/" class="details-actions__item text-danger">Logout</a>
-                </div>
+                </nav>
             </div>
         </div>
     </div>
