@@ -1,0 +1,56 @@
+.modal {
+    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-overflow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -99;
+    }
+
+    &-dialog {
+        min-width: 40rem;
+        background: $secondary-bg;
+        box-shadow: $main-shadow;
+        border-radius: 1.2rem;
+        padding: 4rem;
+    }
+
+    &-body {
+        margin: 4rem 0;
+
+        .upload__button {
+            display: block;
+            text-align: center;
+            color: $primary-color;
+            cursor: pointer;
+        }
+    }
+
+    &-footer {
+        .modal__error {
+            display: block;
+            margin-top: 2rem;
+            text-align: center;
+            color: $danger-color
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+    }
+}

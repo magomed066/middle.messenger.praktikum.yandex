@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./scss/index.scss" />
+		<title>Welcome to Chatify!</title>
+	</head>
+	<body>
+		<main class="centered-page">
+			<form class="card">
+				<h1 class="card__title">Sign in</h1>
+
+				{{> input for="login" label="Login" id="login" name="login" type="text" placeholder="Type your login..."}} 
+                {{> input for="password" label="Password" id="password" name="password" type="password" placeholder="Type your password..." }} 
+                
+                {{> button type="submit" text="Sign in" className="btn-primary"}}
+
+				<nav class="card-navigation">
+                    <a href="./pages/register/register.hbs" class="card__link">
+                        Don't have an account?
+                    </a>
+                    <a href="./pages/chats/chats.hbs" class="card__link">Go to chats</a>
+                    <a href="./pages/error/not-found.hbs" class="card__link">Error 404 page</a>
+                    <a href="./pages/error/server-error.hbs" class="card__link">Error 500 page</a>
+                </nav>
+			</form>
+        </main>
+	</body>
+</html>

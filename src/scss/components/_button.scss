@@ -1,0 +1,13 @@
+.btn {
+    border: none;
+    padding: 1.6rem;
+    cursor: pointer;
+    width: 100%;
+
+    border-radius: $input-border-radius;
+
+    &-primary {
+        color: #fff;
+        background: $primary-color;
+    }
+}

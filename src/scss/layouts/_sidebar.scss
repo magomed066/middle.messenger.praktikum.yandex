@@ -1,0 +1,36 @@
+.sidebar {
+    width: 38rem;
+    background: $secondary-bg;
+    height: 100%;
+    padding: 3rem 3.4rem;
+    border-radius: $primary-border-radius;
+    overflow: hidden;
+
+    &-header {
+
+        display: flex;
+        justify-content: space-between;
+
+        &__link {
+            display: block;
+            color: $primary-color;
+            text-align: end;
+            margin-top: 1.6rem;
+            font-size: 1.6rem;
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            &.danger {
+                color: $danger-color;
+            }
+        }
+    }
+
+    &-search {
+        width: 100%;
+        margin-top: 3rem;
+    }
+}

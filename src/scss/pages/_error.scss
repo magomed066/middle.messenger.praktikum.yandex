@@ -1,0 +1,33 @@
+.error-page {
+    & .error {
+        display: flex;
+        align-items: center;
+        gap: 6rem;
+
+        &__text {
+            font-size: 4rem;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -2.5rem;
+                width: .1rem;
+                background: $secondary-text;
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.8rem;
+            gap: 1rem;
+
+            &__link {
+                color: $primary-color
+            }
+        }
+    }
+}

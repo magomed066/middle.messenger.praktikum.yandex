@@ -1,0 +1,54 @@
+.profile-page {
+    .details {
+        &-avatar {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .avatar-wrapper {
+                width: 10rem;
+                height: 10rem;
+                border-radius: 100%;
+                overflow: hidden;
+            }
+
+            &__username {
+                margin-top: 2rem;
+                color: $secondary-text;
+                font-size: 2rem;
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+
+            &__item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                color: $secondary-text;
+                font-size: 1.6rem;
+                padding: 2.5rem 0;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $secondary-text-light;
+                }
+            }
+        }
+
+        &-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+
+            &__item {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../scss/index.scss">
+    <title>Editing profile</title>
+</head>
+<body>
+    <main class="profile-page centered-page">
+        <div class="card">
+            <form>
+                {{> input for="email" label="Email" id="email" name="email" type="email" placeholder="Type your email..."}}
+                {{> input for="login" label="Login" id="login" name="login" type="login" placeholder="Type your login..."}}
+                {{> input for="first_name" label="First name" id="first_name" name="first_name" type="text" placeholder="Type your first name..."}}
+                {{> input for="second_name" label="Second name" id="second_name" name="second_name" type="text" placeholder="Type your second name..."}}
+                {{> input for="display_namee" label="Display name" id="display_name" name="display_name" type="text" placeholder="Type your display name..."}}
+                {{> input for="phone" label="Phone" id="phone" name="phone" type="text" placeholder="Type your last phone..."}}
+
+                {{> button text="Save" type="submit" className="btn-primary"}}
+            </form>
+
+            <nav class="card-navigation">
+                <a href="../profile/profile.hbs" class="card__link text-primary">Cancel</a>
+            </nav>
+        </div>
+    </main>
+</body>
+</html>
