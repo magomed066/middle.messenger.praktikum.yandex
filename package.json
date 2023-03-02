@@ -1,28 +1,41 @@
 {
-	"name": "online-chat",
-	"version": "1.0.0",
-	"description": "Web App in Vanilla TS",
-	"source": "./src/index.hbs",
-	"scripts": {
-		"dev": "parcel",
-		"start": "npm run build && node server.js",
-		"build": "parcel build"
-	},
-	"engines": {
-		"node": ">= 14.0.0"
-	},
-	"keywords": [
-		"TypeScript",
-		"Sass",
-		"Vanilla",
-		"TS"
-	],
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"@anikin/parcel-transformer-handlebars": "1.0.9",
-		"@parcel/transformer-sass": "2.8.3",
-		"express": "4.18.2",
-		"parcel": "2.8.3"
-	}
+  "name": "online-chat",
+  "version": "1.0.0",
+  "description": "Web App in Vanilla TS",
+  "source": "./src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "start": "npm run build && node server.js",
+    "build": "parcel build"
+  },
+  "engines": {
+    "node": ">= 14.0.0"
+  },
+  "keywords": [
+    "TypeScript",
+    "Sass",
+    "Vanilla",
+    "TS"
+  ],
+  "author": "",
+  "targets": {
+    "regular": {
+      "context": "browser"
+    }
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "1.0.9",
+    "@anikin/parcel-transformer-handlebars-precompile": "1.0.1",
+    "@parcel/transformer-sass": "2.8.3",
+    "@typescript-eslint/eslint-plugin": "5.52.0",
+    "@typescript-eslint/parser": "5.52.0",
+    "eslint": "8.35.0",
+    "eslint-config-airbnb": "19.0.4",
+    "express": "4.18.2",
+    "parcel": "2.8.3",
+    "stylelint": "15.2.0",
+    "stylelint-config-recommended": "10.0.1",
+    "typescript": "4.9.5"
+  }
 }

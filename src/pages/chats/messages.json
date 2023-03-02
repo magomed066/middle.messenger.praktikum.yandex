@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "userName": "Jogn Doe",
+    "time": "10:33",
+    "userAvatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
+    "messages": [
+      {
+        "id": "d333db6c-0a20-48fe-a559-f0cf8553549e",
+        "text": "Voluptate pariatur sint mollit est. Duis reprehenderit aliquip proident officia do. Do ut occaecat aute tempor. Nulla ea non incididunt ea nulla aute non pariatur pariatur excepteur eu amet qui. Adipisicing ut cillum consectetur est cupidatat sint irure reprehenderit aliqua id velit est. Incididunt aliquip nulla anim labore duis ut.\r\n",
+        "media": null,
+        "time": "10:34",
+        "mine": true
+      },
+      {
+        "id": "371cf8d5-61f9-43a7-8d3f-07e20b6ef29c",
+        "text": "Est commodo Lorem amet ipsum ipsum velit officia nulla ut cillum labore. Officia excepteur non est voluptate consectetur non do qui quis voluptate enim cillum sit dolore. Ullamco id enim consectetur ut et id adipisicing.\r\n",
+        "time": "10:40",
+        "mine": false
+      },
+      {
+        "id": "839836be-4edb-49fc-908b-3cf2f522995c",
+        "text": "Non cupidatat labore aliquip ea aute ut nostrud dolore ut magna voluptate. Aliquip sunt adipisicing quis et aute tempor irure aute ea enim aliqua ad commodo eiusmod. Deserunt excepteur magna consectetur ipsum qui tempor. Ea ullamco pariatur duis enim sunt ex mollit ex eiusmod esse laboris et in dolore. Nostrud nulla tempor voluptate proident est culpa.\r\n",
+        "time": "11: 30",
+        "mine": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "userName": "Max Doe",
+    "message": "Are you down for a party tonight?",
+    "time": "1:02",
+    "userAvatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
+    "messages": [
+      {
+        "id": "d333db6c-0a20-48fe-a559-f0cf8553549e",
+        "text": "Voluptate pariatur sint mollit est. Duis reprehenderit aliquip proident officia do. Do ut occaecat aute tempor. Nulla ea non incididunt ea nulla aute non pariatur pariatur excepteur eu amet qui. Adipisicing ut cillum consectetur est cupidatat sint irure reprehenderit aliqua id velit est. Incididunt aliquip nulla anim labore duis ut.\r\n",
+        "media": null,
+        "time": "10:34",
+        "mine": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "userName": "Jane Doe",
+    "message": "what are your plans for today?",
+    "time": "3:15",
+    "userAvatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1061&q=80",
+    "messages": [
+      {
+        "id": "d333db6c-0a20-48fe-a559-f0cf8553549e",
+        "text": "Voluptate pariatur sint mollit est. Duis reprehenderit aliquip proident officia do. Do ut occaecat aute tempor. Nulla ea non incididunt ea nulla aute non pariatur pariatur excepteur eu amet qui. Adipisicing ut cillum consectetur est cupidatat sint irure reprehenderit aliqua id velit est. Incididunt aliquip nulla anim labore duis ut.\r\n",
+        "media": null,
+        "time": "10:34",
+        "mine": true
+      },
+
+      {
+        "id": "839836be-4edb-49fc-908b-3cf2f522995c",
+        "text": "Non cupidatat labore aliquip ea aute ut nostrud dolore ut magna voluptate. Aliquip sunt adipisicing quis et aute tempor irure aute ea enim aliqua ad commodo eiusmod. Deserunt excepteur magna consectetur ipsum qui tempor. Ea ullamco pariatur duis enim sunt ex mollit ex eiusmod esse laboris et in dolore. Nostrud nulla tempor voluptate proident est culpa.\r\n",
+        "time": "11: 30",
+        "mine": false
+      }
+    ]
+  }
+]

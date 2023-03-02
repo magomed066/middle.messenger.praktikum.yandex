@@ -1,0 +1,14 @@
+**/*.min.js
+**/*.hbs
+**/*.scss
+**/*.html
+/node_modules
+/dist
+/.github
+/.parcel-cache
+/build
+**/*.min.js
+*.*
+**/*.json
+!*.css
+!*.pcss
