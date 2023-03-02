@@ -86,6 +86,6 @@ const template = `
             </nav>
         </form>
     </main>
-`
+`;
 
-export default template
+export default template;

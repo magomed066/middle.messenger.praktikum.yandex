@@ -1,37 +1,37 @@
-import Block from '../../core/block/block'
+import Block from "../../core/block/block";
 
-import { Props } from './types'
+import { Props } from "./types";
 
 class Messages extends Block {
-	static componentName = 'Messages'
+    static componentName = "Messages";
 
-	constructor(props: Props) {
-		super({ ...props, events: { click: props.onClick } })
-	}
+    constructor(props: Props) {
+        super({ ...props, events: { click: props.onClick } });
+    }
 
-	protected makePropsToState(props: Props): void {
-		this.state = {
-			activeChatMessages: props.activeChatMessages,
-		}
-	}
+    protected makePropsToState(props: Props): void {
+        this.state = {
+            activeChatMessages: props.activeChatMessages,
+        };
+    }
 
-	protected render(): string {
-		const { activeChatMessages } = this.state as Props
+    protected render(): string {
+        const { activeChatMessages } = this.state as Props;
 
-		const msg = activeChatMessages?.messages
-			.map(
-				(m) => `
-            <li class="messages-list__item ${m.mine ? 'me' : ''}">
-                <div class="message ${m.mine ? 'me' : ''}">
+        const msg = activeChatMessages?.messages
+            .map(
+                (m) => `
+            <li class="messages-list__item ${m.mine ? "me" : ""}">
+                <div class="message ${m.mine ? "me" : ""}">
                     <p class="message__text">${m.text}</p>
                     <p class="time">${m.time}</p>
                 </div>
             </li>
-        `,
-			)
-			.join('')
+        `
+            )
+            .join("");
 
-		return `
+        return `
 
             <div class="messages">
                 <p class="messages__date">Today</p>
@@ -41,8 +41,8 @@ class Messages extends Block {
 
                 </ul>
             </div>
-        `
-	}
+        `;
+    }
 }
 
-export default Messages
+export default Messages;

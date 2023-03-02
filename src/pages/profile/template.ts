@@ -95,6 +95,6 @@ const template = `
     </form>
 
     </div>
-`
+`;
 
-export default template
+export default template;

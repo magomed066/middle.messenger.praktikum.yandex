@@ -1,27 +1,27 @@
-import Block from '../../core/block/block'
-import { Props } from './types'
+import Block from "../../core/block/block";
+import { Props } from "./types";
 // import { Props } from './types'
 
 export class ChatsList extends Block {
-	static componentName = 'ChatsList'
+    static componentName = "ChatsList";
 
-	constructor(props: Props) {
-		super(props)
-	}
+    constructor(props: Props) {
+        super(props);
+    }
 
-	protected makePropsToState(props: Props): void {
-		this.state = {
-			chats: props.chats,
-			activeChatID: props.activeChatID,
-		}
-	}
+    protected makePropsToState(props: Props): void {
+        this.state = {
+            chats: props.chats,
+            activeChatID: props.activeChatID,
+        };
+    }
 
-	protected render(): string {
-		const { chats, activeChatID } = this.state as Props
+    protected render(): string {
+        const { chats, activeChatID } = this.state as Props;
 
-		const chat = chats
-			.map(
-				(item) => `
+        const chat = chats
+            .map(
+                (item) => `
                 {{{
                     ChatsListItem
                         name="${item.userName}"
@@ -32,14 +32,14 @@ export class ChatsList extends Block {
                         activeChatID="${activeChatID}"
                         onClick=handleChatUserClick
                 }}}
-            `,
-			)
-			.join('')
+            `
+            )
+            .join("");
 
-		return `
+        return `
             <ul class="chats-list">
                 ${chat}
             </ul>
-        `
-	}
+        `;
+    }
 }

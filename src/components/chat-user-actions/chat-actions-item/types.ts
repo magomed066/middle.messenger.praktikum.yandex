@@ -1,7 +1,7 @@
-import { userActions } from '../../../core'
+import { userActions } from "../../../core";
 
 export interface Props {
-	onClick?: () => void
-	action: userActions
-	text: string
+    onClick?: () => void;
+    action: userActions;
+    text: string;
 }

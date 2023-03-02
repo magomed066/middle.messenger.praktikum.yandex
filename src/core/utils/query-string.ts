@@ -1,5 +1,5 @@
-import { Indexed } from '../types/common'
-import isObject from './is-object'
+import { Indexed } from "../types/common";
+import isObject from "./is-object";
 
 /**
  * Функцию реализовывать здесь необязательно, но может помочь не плодить логику у GET-метода
@@ -8,17 +8,17 @@ import isObject from './is-object'
  */
 
 function queryStringify(data: Indexed): string {
-	if (!isObject(data)) {
-		throw new Error('Data must be an object')
-	}
+    if (!isObject(data)) {
+        throw new Error("Data must be an object");
+    }
 
-	const keys = Object.keys(data)
-	return keys.reduce((result, key, index) => {
-		const value = data[key]
-		const end = index < keys.length - 1 ? '&' : ''
+    const keys = Object.keys(data);
+    return keys.reduce((result, key, index) => {
+        const value = data[key];
+        const end = index < keys.length - 1 ? "&" : "";
 
-		return `${result}${key}=${value}${end}`
-	}, '?')
+        return `${result}${key}=${value}${end}`;
+    }, "?");
 }
 
-export default queryStringify
+export default queryStringify;
