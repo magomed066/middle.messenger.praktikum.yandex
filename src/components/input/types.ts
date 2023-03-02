@@ -10,4 +10,9 @@ export interface Props {
     maxLength?: string;
     placeholder?: string;
     id?: string;
+    events?: {
+        input?: () => void;
+        focus?: () => void;
+        blur?: () => void;
+    };
 }

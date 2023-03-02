@@ -3,4 +3,7 @@ export interface Props {
     text: string;
     className?: string;
     onClick?: () => void;
+    events?: {
+        click?: () => void;
+    };
 }

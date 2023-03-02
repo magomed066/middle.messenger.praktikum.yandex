@@ -1,7 +1,7 @@
 import { Block } from "../../core";
 import { Props } from "./types";
 
-export class Search extends Block {
+export class Search extends Block<Props> {
     static componentName = "Search";
     constructor(props: Props) {
         super({

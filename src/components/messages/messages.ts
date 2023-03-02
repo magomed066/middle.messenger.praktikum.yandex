@@ -2,7 +2,7 @@ import Block from "../../core/block/block";
 
 import { Props } from "./types";
 
-class Messages extends Block {
+class Messages extends Block<Props> {
     static componentName = "Messages";
 
     constructor(props: Props) {

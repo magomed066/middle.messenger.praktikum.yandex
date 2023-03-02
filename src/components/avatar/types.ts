@@ -1,5 +1,8 @@
 export interface Props {
     url: string;
     alt: string;
-    onClick?: () => {};
+    onClick: () => void;
+    events?: {
+        click: () => void;
+    };
 }

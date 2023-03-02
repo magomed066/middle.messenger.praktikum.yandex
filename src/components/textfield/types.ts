@@ -14,4 +14,9 @@ export interface Props {
     labelFor?: string;
     id?: string;
     noErrorText?: boolean;
+    events?: {
+        input?: () => void;
+        focus?: () => void;
+        blur?: () => void;
+    };
 }

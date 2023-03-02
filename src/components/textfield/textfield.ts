@@ -1,7 +1,7 @@
 import { Block } from "../../core";
 import { Props } from "./types";
 
-export class Textfield extends Block {
+export class Textfield extends Block<Props> {
     static componentName = "Textfield";
     constructor(props: Props) {
         super({

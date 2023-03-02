@@ -1,7 +1,7 @@
 import { Block } from "../../core";
 import { Props } from "./types";
 
-export class Input extends Block {
+export class Input extends Block<Props> {
     static componentName = "Input";
     constructor(props: Props) {
         super({

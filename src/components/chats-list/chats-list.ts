@@ -1,8 +1,7 @@
 import Block from "../../core/block/block";
 import { Props } from "./types";
-// import { Props } from './types'
 
-export class ChatsList extends Block {
+export class ChatsList extends Block<Props> {
     static componentName = "ChatsList";
 
     constructor(props: Props) {

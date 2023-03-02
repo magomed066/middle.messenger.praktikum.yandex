@@ -8,4 +8,7 @@ export interface Props {
     avatar: Chat["userAvatar"];
     name: Chat["userName"];
     activeChatID: number;
+    events?: {
+        click?: () => void;
+    };
 }

@@ -1,7 +1,7 @@
 import Block from "../../core/block/block";
 import { Props } from "./types";
 
-export class Avatar extends Block {
+export class Avatar extends Block<Props> {
     static componentName = "Avatar";
 
     constructor(props: Props) {

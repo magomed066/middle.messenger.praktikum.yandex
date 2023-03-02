@@ -8,4 +8,7 @@ export interface Props {
         text: string;
         action: userActions;
     }[];
+    events?: {
+        click?: () => void;
+    };
 }

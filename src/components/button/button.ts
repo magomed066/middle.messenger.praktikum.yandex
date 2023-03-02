@@ -1,7 +1,7 @@
 import Block from "../../core/block/block";
 import { Props } from "./types";
 
-export class Button extends Block {
+export class Button extends Block<Props> {
     static componentName = "Button";
 
     constructor(props: Props) {

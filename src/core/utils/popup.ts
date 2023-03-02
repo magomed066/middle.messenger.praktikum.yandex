@@ -15,16 +15,13 @@ class Popup {
         this._activeClass = options.activeClass;
         this._closeSelector = options?.closeSelector || "";
 
-        this._element.addEventListener(
-            "click",
-            this._closeByOuterClick.bind(this)
-        );
+        this._closeByOuterClick = this._closeByOuterClick.bind(this);
+        this._closePopupByOuterClick = this._closePopupByOuterClick.bind(this);
+
+        this._element.addEventListener("click", this._closeByOuterClick);
 
         if (options.isPopup) {
-            document.addEventListener(
-                "click",
-                this._closePopupByOuterClick.bind(this)
-            );
+            document.addEventListener("click", this._closePopupByOuterClick);
         }
     }
 
