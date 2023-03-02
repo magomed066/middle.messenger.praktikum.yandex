@@ -42,44 +42,4 @@ class EventBus<
 	}
 }
 
-// class EventBus implements IEventBus {
-// 	private listeners: Record<string, Array<AnyFunc>>
-
-// 	constructor() {
-// 		this.listeners = {}
-// 	}
-
-// 	on(event: string, cb: AnyFunc) {
-// 		if (!this.listeners[event]) {
-// 			this.listeners[event] = []
-// 		}
-
-// 		const isRegistered = this.listeners[event].some(
-// 			(listener) => listener === cb,
-// 		)
-
-// 		if (isRegistered) return
-
-// 		this.listeners[event].push(cb)
-// 	}
-
-// 	off(event: string, cb: AnyFunc) {
-// 		if (!this.listeners[event]) {
-// 			throw new Error(`There is no such an event: ${event}`)
-// 		}
-
-// 		this.listeners[event] = this.listeners[event].filter(
-// 			(listener) => listener !== cb,
-// 		)
-// 	}
-
-// 	emit(event: string, ...args: any) {
-// 		if (!this.listeners[event]) {
-// 			throw new Error(`There is no such an event: ${event}`)
-// 		}
-
-// 		this.listeners[event].forEach((listener) => listener(...args))
-// 	}
-// }
-
 export default EventBus

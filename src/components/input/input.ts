@@ -1,4 +1,3 @@
-import { prependOnceListener } from 'process'
 import { Block } from '../../core'
 import { Props } from './types'
 

@@ -4,19 +4,19 @@ import template from './template'
 
 import chats from './chats.json'
 import messages from './messages.json'
+import { Nullable } from '../../core/types/common'
 
 export class Chats extends Block {
-	validation: Validator
-	messageValidation: Validator
+	validation: Nullable<Validator>
+	messageValidation: Nullable<Validator>
 
-	componentDidUpdate(
-		oldProps: any,
-		newProps: { activeChatID: string | number },
-	): boolean {
-		return true
+	constructor(props: {}) {
+		super(props)
+		this.validation = null
+		this.messageValidation = null
 	}
 
-	protected makePropsToState(props) {
+	protected makePropsToState() {
 		this.state = {
 			handleMenuClick: () => {
 				new Popup({
@@ -68,15 +68,15 @@ export class Chats extends Block {
 			handleSubmit: (evt: Event) => {
 				evt.preventDefault()
 
-				const isValid = this.validation.isValid()
+				const isValid = this.validation?.isValid()
 
 				console.log(isValid)
 
 				console.log(this.validation)
 
 				if (isValid) {
-					console.log(this.validation.values)
-					this.validation.clearAllInputs()
+					console.log(this.validation?.values)
+					this.validation?.clearAllInputs()
 				}
 			},
 
@@ -92,7 +92,7 @@ export class Chats extends Block {
 			],
 			chats: chats.chats,
 
-			handleChatUserClick: (id) => {
+			handleChatUserClick: (id: number) => {
 				this.setState({
 					activeChatID: id,
 					messages: messages.find((i) => i.id == id),
@@ -104,21 +104,21 @@ export class Chats extends Block {
 			handleMessageSubmit: (e: Event) => {
 				e.preventDefault()
 
-				const isValid = this.messageValidation.isValid()
+				const isValid = this.messageValidation?.isValid()
 
 				if (isValid) {
-					console.log(this.messageValidation.values)
-					this.messageValidation.clearAllInputs()
+					console.log(this.messageValidation?.values)
+					this.messageValidation?.clearAllInputs()
 				}
 			},
-			handleChange: (evt: Event) => {},
+			handleChange: () => {},
 			handleValidateMessage: (e: Event) => {
 				const target = e.target as HTMLInputElement
 
-				this.messageValidation.hideErrorMessage(target.name)
+				this.messageValidation?.hideErrorMessage(target.name)
 
 				if (target.classList.contains('input') && target.value) {
-					this.validation.checkInput(target.name, target.value)
+					this.validation?.checkInput(target.name, target.value)
 				}
 			},
 		}

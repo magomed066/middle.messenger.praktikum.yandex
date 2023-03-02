@@ -5,7 +5,7 @@ import { Props } from './types'
 export class ChatsList extends Block {
 	static componentName = 'ChatsList'
 
-	constructor(props) {
+	constructor(props: Props) {
 		super(props)
 	}
 

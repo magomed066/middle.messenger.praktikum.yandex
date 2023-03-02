@@ -56,7 +56,7 @@ class Validator {
 		if (inputName === 'login') {
 			return (
 				this._checkValidity(inputName, value, validation.login) ||
-				this._checkValidity(inputName, value, validation.email)
+				this._checkValidity(inputName, value, validation.empty)
 			)
 		}
 

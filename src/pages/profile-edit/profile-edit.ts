@@ -1,10 +1,16 @@
 import { Block, navigate, renderDOM, Validator } from '../../core'
+import { Nullable } from '../../core/types/common'
 import template from './template'
 
 export class ProfileEdit extends Block {
-	validation: Validator
+	validation: Nullable<Validator>
 
-	componentDidMount(props: any): void {
+	constructor(props: {}) {
+		super(props)
+		this.validation = null
+	}
+
+	componentDidMount(): void {
 		this.validation = new Validator('.profile-form')
 	}
 
@@ -13,20 +19,20 @@ export class ProfileEdit extends Block {
 			handleSubmit: (evt: Event) => {
 				evt.preventDefault()
 
-				const isValid = this.validation.isValid()
+				const isValid = this.validation?.isValid()
 
 				if (isValid) {
-					console.log(this.validation.values)
-					this.validation.clearAllInputs()
+					console.log(this.validation?.values)
+					this.validation?.clearAllInputs()
 				}
 			},
 			handleValidate: (e: Event) => {
 				const target = e.target as HTMLInputElement
 
-				this.validation.hideErrorMessage(target.name)
+				this.validation?.hideErrorMessage(target.name)
 
 				if (target.classList.contains('input') && target.value) {
-					this.validation.checkInput(target.name, target.value)
+					this.validation?.checkInput(target.name, target.value)
 				}
 			},
 

@@ -13,17 +13,17 @@ export const navigate = (to?: string) => {
 
 	switch (path) {
 		case '/':
-			return new Login()
+			return new Login({})
 		case '/register':
-			return new Register()
+			return new Register({})
 		case '/profile':
-			return new Profile()
+			return new Profile({})
 		case '/edit-profile':
-			return new ProfileEdit()
+			return new ProfileEdit({})
 		case '/new-password':
-			return new NewPassword()
+			return new NewPassword({})
 		case '/chats':
-			return new Chats()
+			return new Chats({})
 		default:
 			return new NotFound()
 	}

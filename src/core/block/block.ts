@@ -74,7 +74,7 @@ export default class Block<P = any> {
 		this.componentDidMount(props)
 	}
 
-	componentDidMount(props: P) {}
+	componentDidMount(_: P) {}
 
 	_componentDidUpdate(oldProps: P, newProps: P) {
 		const response = this.componentDidUpdate(oldProps, newProps)

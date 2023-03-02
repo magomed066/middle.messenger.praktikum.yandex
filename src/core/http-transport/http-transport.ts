@@ -8,7 +8,7 @@ class HTTP {
 		this._baseUrl = url
 	}
 
-	async get<T>(url, options: Options = {} as Options): Promise<T> {
+	async get<T>(url: string, options: Options = {} as Options): Promise<T> {
 		return this.request(
 			url,
 			{
@@ -19,7 +19,7 @@ class HTTP {
 		)
 	}
 
-	async post<T>(url, options: Options = {} as Options): Promise<T> {
+	async post<T>(url: string, options: Options = {} as Options): Promise<T> {
 		return this.request(
 			url,
 			{
@@ -30,7 +30,7 @@ class HTTP {
 		)
 	}
 
-	async put<T>(url, options: Options = {} as Options): Promise<T> {
+	async put<T>(url: string, options: Options = {} as Options): Promise<T> {
 		return this.request(
 			url,
 			{
@@ -41,7 +41,7 @@ class HTTP {
 		)
 	}
 
-	async patch<T>(url, options: Options = {} as Options): Promise<T> {
+	async patch<T>(url: string, options: Options = {} as Options): Promise<T> {
 		return this.request(
 			url,
 			{
@@ -52,7 +52,7 @@ class HTTP {
 		)
 	}
 
-	async delete<T>(url, options: Options = {} as Options): Promise<T> {
+	async delete<T>(url: string, options: Options = {} as Options): Promise<T> {
 		return this.request(
 			url,
 			{
