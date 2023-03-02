@@ -1,4 +1,3 @@
-import { prependOnceListener } from 'process'
 import { Block } from '../../core'
 import { Props } from './types'
 
@@ -24,7 +23,7 @@ export class Search extends Block {
 	}
 
 	protected render(): string {
-		const { name, placeholder } = this.state as Props
+		const {} = this.state as Props
 
 		return `
             <div class="textfield-search">

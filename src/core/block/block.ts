@@ -3,10 +3,6 @@ import EventBus from '../event-bus/event-bus'
 import { Nullable, Values } from '../types/common'
 import { guid } from '../utils'
 
-interface BlockMeta<P = any> {
-	props: P
-}
-
 type Events = Values<typeof Block.EVENTS>
 
 export default class Block<P = any> {
@@ -18,7 +14,6 @@ export default class Block<P = any> {
 	} as const
 
 	public id = guid()
-	private readonly _meta: BlockMeta
 
 	protected _element: Nullable<HTMLElement> = null
 	protected readonly props: P
@@ -34,11 +29,11 @@ export default class Block<P = any> {
 	public constructor(props?: P) {
 		const eventBus = new EventBus<Events>()
 
-		this._meta = {
-			props,
-		}
+		//
 
-		this.makePropsToState(props)
+		if (props) {
+			this.makePropsToState(props)
+		}
 
 		this.props = this._makePropsProxy(props || ({} as P))
 		this.state = this._makePropsProxy(this.state)
@@ -61,7 +56,8 @@ export default class Block<P = any> {
 		this._element = this._createDocumentElement('div')
 	}
 
-	protected makePropsToState(props: any): void {
+	protected makePropsToState(props: {}): void {
+		console.log(props)
 		this.state = {}
 	}
 
@@ -85,6 +81,7 @@ export default class Block<P = any> {
 	}
 
 	componentDidUpdate(oldProps: P, newProps: P) {
+		console.log(oldProps, newProps)
 		return true
 	}
 
