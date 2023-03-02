@@ -38,6 +38,12 @@
                 color: $dark-color;
                 overflow: hidden;
 
+                &.active {
+                    transform: translateY(0);
+                    opacity: 1;
+                    z-index: 9999;
+                }
+
                 &__item {
                     padding: 1rem;
                     cursor: pointer;
@@ -59,6 +65,7 @@
                 height: 5rem;
                 background: $secondary-text-light;
                 border-radius: 50%;
+                overflow: hidden;
             }
 
             &__name {
@@ -92,15 +99,23 @@
                 cursor: pointer;
             }
 
-            &__input {
-                border: none;
-                padding: 1rem;
-                color: $dark-color;
+            .textfield {
+                width: 100%;
+                padding: 10px;
+                margin: 0;
 
-                &::placeholder {
-                    color: $secondary-text-light;
+                &__input {
+                    border: none;
+                    padding: 1rem;
+                    color: $dark-color;
+
+                    &::placeholder {
+                        color: $secondary-text-light;
+                    }
                 }
             }
+
+
 
             &__submit {
                 width: 4rem;

@@ -1,0 +1,24 @@
+{
+	"rules": {
+		"no-unused-vars": "error",
+		"max-len": [1, 120],
+		"semi": "off",
+		"max-params": ["error", 6],
+		"@typescript-eslint/no-require-imports": "off",
+		"@typescript-eslint/no-var-requires": "off",
+		"@typescript-eslint/no-extraneous-class": "off",
+		"@typescript-eslint/default-param-last": "off",
+		"@typescript-eslint/no-unused-vars": 2,
+		"@typescript-eslint/naming-convention": [
+			"error",
+			{
+				"selector": "variable",
+				"format": ["camelCase", "UPPER_CASE"]
+			}
+		],
+		"@typescript-eslint/ban-ts-comment": "off",
+		"@typescript-eslint/prefer-optional-chain": "off",
+		"prefer-destructuring": "off",
+		"@typescript-eslint/ban-types": "off"
+	}
+}

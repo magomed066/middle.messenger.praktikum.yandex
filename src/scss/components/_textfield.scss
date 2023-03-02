@@ -7,6 +7,16 @@
         margin-bottom: 1.6rem;
     }
 
+    &.search {
+        width: 100%;
+        margin-top: 3rem;
+
+        & input {
+            border-radius: $input-border-radius;
+            padding: .8rem 1.5rem;
+        }
+    }
+
     &__label {
         color: $secondary-text;
         font-size: 1.5rem;

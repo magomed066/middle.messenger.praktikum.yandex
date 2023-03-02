@@ -1,0 +1,8 @@
+**/*.min.js
+**/*.pug
+**/*.scss
+**/*.html
+/node_modules
+/dist
+/.github
+/.parcel-cache

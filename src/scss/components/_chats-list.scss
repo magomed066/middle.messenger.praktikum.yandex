@@ -34,6 +34,11 @@
             height: 4.5rem;
             background-color: $secondary-text-light;
             border-radius: 50%;
+            overflow: hidden;
+
+            .img {
+                width: 100%;
+            }
         }
 
         .user {
