@@ -17,6 +17,11 @@
 		"Vanilla",
 		"TS"
 	],
+	"targets": {
+		"regular": {
+			"context": "browser"
+		}
+	},
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
