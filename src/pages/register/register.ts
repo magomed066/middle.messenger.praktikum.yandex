@@ -1,40 +1,46 @@
-import { Block, navigate, renderDOM, Validator } from '../../core'
-import template from './template'
+import { Block, navigate, renderDOM, Validator } from "../../core";
+import { Nullable } from "../../core/types/common";
+import template from "./template";
 
 export class Register extends Block {
-	validation: Validator
+    validation: Nullable<Validator>;
 
-	componentDidMount(props: any): void {
-		this.validation = new Validator('.register-form')
-	}
+    constructor(props: {}) {
+        super(props);
+        this.validation = null;
+    }
 
-	protected makePropsToState() {
-		this.state = {
-			handleSubmit: (evt: Event) => {
-				evt.preventDefault()
+    componentDidMount(): void {
+        this.validation = new Validator(".register-form");
+    }
 
-				const isValid = this.validation.isValid()
+    protected makePropsToState() {
+        this.state = {
+            handleSubmit: (evt: Event) => {
+                evt.preventDefault();
 
-				if (isValid) {
-					console.log(this.validation.values)
-					this.validation.clearAllInputs()
-				}
-			},
-			handleValidate: (e: Event) => {
-				const target = e.target as HTMLInputElement
+                const isValid = this.validation?.isValid();
 
-				this.validation.hideErrorMessage(target.name)
+                if (isValid) {
+                    console.log(this.validation?.values);
+                    this.validation?.clearAllInputs();
+                }
+            },
+            handleValidate: (e: Event) => {
+                const target = e.target as HTMLInputElement;
 
-				if (target.classList.contains('input') && target.value) {
-					this.validation.checkInput(target.name, target.value)
-				}
-			},
-			handleLinkClick: () => {
-				renderDOM(navigate('/'))
-			},
-		}
-	}
-	render() {
-		return template
-	}
+                this.validation?.hideErrorMessage(target.name);
+
+                if (target.classList.contains("input") && target.value) {
+                    this.validation?.checkInput(target.name, target.value);
+                }
+            },
+            handleLinkClick: () => {
+                renderDOM(navigate("/"));
+            },
+        };
+    }
+    render() {
+        return template;
+    }
 }

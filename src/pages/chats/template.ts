@@ -137,6 +137,6 @@ const template = `
     </main>    
 
 
-`
+`;
 
-export default template
+export default template;

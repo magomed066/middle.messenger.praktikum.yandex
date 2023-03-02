@@ -1,13 +1,13 @@
-import { InputType } from '../../core/types/common'
+import { InputType } from "../../core/types/common";
 
 export interface Props {
-	onInput?: () => void
-	onFocus?: () => void
-	onBlur?: () => void
-	name: string
-	type: InputType
-	minLength?: string
-	maxLength?: string
-	placeholder?: string
-	id?: string
+    onInput?: () => void;
+    onFocus?: () => void;
+    onBlur?: () => void;
+    name: string;
+    type: InputType;
+    minLength?: string;
+    maxLength?: string;
+    placeholder?: string;
+    id?: string;
 }

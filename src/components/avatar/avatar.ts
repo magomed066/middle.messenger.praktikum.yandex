@@ -1,28 +1,28 @@
-import Block from '../../core/block/block'
-import { Props } from './types'
+import Block from "../../core/block/block";
+import { Props } from "./types";
 
 export class Avatar extends Block {
-	static componentName = 'Avatar'
+    static componentName = "Avatar";
 
-	constructor(props: Props) {
-		super({ ...props, events: { click: props.onClick } })
-	}
+    constructor(props: Props) {
+        super({ ...props, events: { click: props.onClick } });
+    }
 
-	protected makePropsToState(props: Props): void {
-		this.state = {
-			url: props.url,
-			alt: props.alt,
-		}
-	}
+    protected makePropsToState(props: Props): void {
+        this.state = {
+            url: props.url,
+            alt: props.alt,
+        };
+    }
 
-	protected render(): string {
-		const { url, alt } = this.state as Props
+    protected render(): string {
+        const { url, alt } = this.state as Props;
 
-		return `
+        return `
             <div class="avatar-wrapper" >
                 <img class="profile-pic" src="${url}" alt="${alt}" />
                 <input class="file-upload" hidden="true" type="file" accept="image/*"/>
             </div>
-        `
-	}
+        `;
+    }
 }

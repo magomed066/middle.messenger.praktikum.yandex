@@ -1,46 +1,52 @@
-import { Block, navigate, Validator } from '../../core'
-import { renderDOM } from '../../core/utils'
-import template from './template'
+import { Block, navigate, Validator } from "../../core";
+import { Nullable } from "../../core/types/common";
+import { renderDOM } from "../../core/utils";
+import template from "./template";
 
 export class Login extends Block {
-	validation: Validator
+    validation: Nullable<Validator>;
 
-	componentDidMount(props: any): void {
-		this.validation = new Validator('.login-form')
-	}
+    constructor(props: {}) {
+        super(props);
+        this.validation = null;
+    }
 
-	protected makePropsToState() {
-		this.state = {
-			handleChange: (evt: Event) => {},
-			handleSubmit: (evt: Event) => {
-				evt.preventDefault()
+    componentDidMount(): void {
+        this.validation = new Validator(".login-form");
+    }
 
-				const isValid = this.validation.isValid()
+    protected makePropsToState() {
+        this.state = {
+            handleChange: () => {},
+            handleSubmit: (evt: Event) => {
+                evt.preventDefault();
 
-				console.log(this.validation)
+                const isValid = this.validation?.isValid();
 
-				if (isValid) {
-					console.log(this.validation.values)
-					this.validation.clearAllInputs()
+                console.log(this.validation);
 
-					renderDOM(navigate('/chats'))
-				}
-			},
-			handleValidate: (e: Event) => {
-				const target = e.target as HTMLInputElement
+                if (isValid) {
+                    console.log(this.validation?.values);
+                    this.validation?.clearAllInputs();
 
-				this.validation.hideErrorMessage(target.name)
+                    renderDOM(navigate("/chats"));
+                }
+            },
+            handleValidate: (e: Event) => {
+                const target = e.target as HTMLInputElement;
 
-				if (target.classList.contains('input') && target.value) {
-					this.validation.checkInput(target.name, target.value)
-				}
-			},
-			handleLinkClick: () => {
-				renderDOM(navigate('/register'))
-			},
-		}
-	}
-	render() {
-		return template
-	}
+                this.validation?.hideErrorMessage(target.name);
+
+                if (target.classList.contains("input") && target.value) {
+                    this.validation?.checkInput(target.name, target.value);
+                }
+            },
+            handleLinkClick: () => {
+                renderDOM(navigate("/register"));
+            },
+        };
+    }
+    render() {
+        return template;
+    }
 }

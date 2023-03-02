@@ -1,36 +1,36 @@
-import Block from '../../core/block/block'
-import { Props } from './types'
+import Block from "../../core/block/block";
+import { Props } from "./types";
 
 export class ChatUserActions extends Block {
-	static componentName = 'ChatUserActions'
+    static componentName = "ChatUserActions";
 
-	constructor(props: Props) {
-		super({ ...props, events: { click: props.onClick } })
-	}
+    constructor(props: Props) {
+        super({ ...props, events: { click: props.onClick } });
+    }
 
-	protected makePropsToState(props: Props): void {
-		this.state = {
-			actions: props.actions,
-		}
-	}
+    protected makePropsToState(props: Props): void {
+        this.state = {
+            actions: props.actions,
+        };
+    }
 
-	protected render(): string {
-		const { actions } = this.state as Props
+    protected render(): string {
+        const { actions } = this.state as Props;
 
-		const item = actions
-			.map((item) => {
-				return `
+        const item = actions
+            .map((item) => {
+                return `
                     {{{
                         ChatActionsItem
                             text="${item.text}"
                             action="${item.action}"
                             onClick=onChatUserActionClick
                     }}}
-                `
-			})
-			.join('')
+                `;
+            })
+            .join("");
 
-		return `
+        return `
             <div class="options">
                 <span class="options-menu">
                     <svg width="4" height="20" viewBox="0 0 4 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,6 +45,6 @@ export class ChatUserActions extends Block {
                     ${item}
                 </ul>
             </div>
-        `
-	}
+        `;
+    }
 }
