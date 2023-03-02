@@ -54,7 +54,10 @@ class Validator {
 		}
 
 		if (inputName === 'login') {
-			return this._checkValidity(inputName, value, validation.login)
+			return (
+				this._checkValidity(inputName, value, validation.login) ||
+				this._checkValidity(inputName, value, validation.email)
+			)
 		}
 
 		if (inputName === 'display_name') {
