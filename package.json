@@ -18,6 +18,11 @@
 		"TS"
 	],
 	"author": "",
+	"targets": {
+		"regular": {
+			"context": "browser"
+		}
+	},
 	"license": "ISC",
 	"devDependencies": {
 		"@anikin/parcel-transformer-handlebars": "1.0.9",
